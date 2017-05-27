@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Better UP Cebu</title>
+	<link href = "./static/adminstyle.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+	<h1>Welcome!</h1>
+	<div id = "main">
+		<div id = "space"> </div>
+		<div id = "content1">
+			
+			<div class= "well">
+				<script> $(document).ready(function () {
+			    $.getJSON(url,
+			    function (json) {
+			        var tr;
+			        for (var i = 0; i < json.length; i++) {
+			            tr = $('<tr/>');
+			            // tr.append("<td>" + json[i].User_Name + "</td>");
+			            tr.append("<td>" + json[i].name + "</td>");
+			            // <!-- tr.append("<td>" + json[i].team + "</td>");
+			       -->      $('table').append(tr);
+			        } 
+			    }); 
+			});</script>
+				<!-- //<h4 id = "subject">{{teachers.name}} -->
+			</div>
+
+
+		</div>
+	</div>
+</body>
+</html>

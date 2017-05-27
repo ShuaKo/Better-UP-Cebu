@@ -19,6 +19,14 @@ app.get('/add_teacher', function(req, res) {
 	res.render('addteacher.html');
 });
 
+app.get('/update_teacher', function(req, res) {
+	res.render('updateTeacher.html');
+});
+
+app.get('/update_avatar', function(req, res) {
+	res.render('updateAvatar.html');
+});
+
 app.post('/add_teacher', function(req, res){
 	const name = req.body.name;
 	const course_graduated = req.body.course_graduated;
@@ -26,7 +34,7 @@ app.post('/add_teacher', function(req, res){
 	const consultation = req.body.consultation;
 
 	Teacher.create({name: name, course_graduated: course_graduated, description: description, consultation: consultation}).then(function() {
-		res.redirect('/');
+		res.redirect('/update_avatar');
 	});
 });
 
@@ -37,8 +45,36 @@ app.post('/update_teacher', function(req, res){
 	const consultation = req.body.consultation;
 	// const id = req.body.id;
 	Teacher.update({name: name, course_graduated: course_graduated, description: description, consultation: consultation}, {where:{ name: name}}).then(function() {
-		res.render('index.html');
+		res.render('updateAvatar.html');
 	});
+});
+
+app.get('/teacher_list', function(req, res) {
+	// var goThrough = 0;
+	// for(goThrough = 0; goThrough < 2; goThrough++) {
+	// 	Teacher.findOne({where: {id: goThrough}}).then(function(teachers) {
+	// 		console.log(teachers.name);
+	// 	});
+	// }
+
+	// res.render('adminhome.html', {
+	// 			teachers: teachers
+	// 		});
+			
+		
+	//}
+	Teacher.findAll().then(function(teachers){
+		//console.log(teachers.name);
+		teachers = JSON.stringify(teachers);
+		if(teachers !== null) {
+
+			console.log('json' + teachers);
+		}
+		res.render('adminhome.html', {
+			teachers: teachers
+		});
+	});
+
 });
 
 app.get('/delete_teacher', function(req, res){
