@@ -21,8 +21,27 @@ app.post('/add_teacher', function(req, res){
 	const description = req.body.description;
 	const consultation = req.body.consultation;
 
-	console.log(req.body);
 	Teacher.create({name: name, course_graduated: course_graduated, description: description, consultation: consultation}).then(function() {
+		res.redirect('/');
+	});
+});
+
+app.post('/update_teacher', function(req, res){
+	const name = req.body.name;
+	const course_graduated = req.body.course_graduated;
+	const description = req.body.description;
+	const consultation = req.body.consultation;
+	// const id = req.body.id;
+	Teacher.update({name: name, course_graduated: course_graduated, description: description, consultation: consultation}, {where:{ name: name}}).then(function() {
+		res.render('index.html');
+	});
+});
+
+app.get('/delete_teacher', function(req, res){
+	const name = req.query.name;
+	// const id = req.query.id;
+	console.log(req.query);
+	Teacher.destroy({where:{ name: name}}).then(function() {
 		res.redirect('/');
 	});
 });
