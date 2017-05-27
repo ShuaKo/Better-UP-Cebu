@@ -1,15 +1,15 @@
-#main {
-	width: 100%;
-	height: 100%;
-	background-color: #111;
-	position: fixed;
-  	margin-top: -20%;
+
+
+
+
+.mySlides {
+	display:none;
 }
-.page1 {
-	width: 100%;
-	height: 100%;
-	position: fixed;
+.w3-left, .w3-right, .w3-badge {
+	cursor:pointer;
 }
-.Title{
-	transform: translate(50%, 0);
+.w3-badge {
+	height:13px;
+	width:13px;
+	padding:0;
 }

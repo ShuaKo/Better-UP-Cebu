@@ -70,15 +70,16 @@ html, body { height: 100%; }
 }
 
 .pt-page h1 strong {
-	color: rgba(0,0,0,0.1);
+	color: rgba(9,9,9,0.4);
 }
 
 .pt-page-1 {
-	background: #0ac2d2;
+	background: #865ab4;
 }
 
 .pt-page-2 {
 	background: #7bb7fa;
+
 }
 
 .pt-page-3 {
@@ -103,13 +104,25 @@ html, body { height: 100%; }
 	position: absolute;
 	width: 300px;
 	z-index: 999999;
-	top: 50%;
-	left: 80%;
+	top: 12%;
+	left: 50%;
 	margin-top: 130px;
 	-webkit-transform: translateX(-50%);
 	-moz-transform: translateX(-50%);
 	-ms-transform: translateX(-50%); 
 	transform: translateX(-50%);
+}
+.checkLeft:Hover>img {
+	display: block;
+}
+.checkLeft>img {
+	display: none;
+}
+.checkRight:Hover>img {
+	display: block;
+}
+.checkRight>img {
+	display: none;
 }
 
 .no-js .pt-triggers {

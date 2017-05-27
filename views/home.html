@@ -1,27 +1,71 @@
-<!doctype html>
-  	<head>
-    	<meta charset="utf-8">
-	    <title>Better UP Cebu</title>
-
-	    <link rel="stylesheet" href="../static/css/styles.css">
-	    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>A Better UP</title>
+		<meta name="author" content="Joshua Majait, Ana Marie Piodos, & Julius Morgan Umacob" />
+		<link rel="stylesheet" type="text/css" href="../static/css/default.css" />
+		<link rel="stylesheet" type="text/css" href="../static/css/multilevelmenu.css" />
+		<link rel="stylesheet" type="text/css" href="../static/css/component.css" />
+		<link rel="stylesheet" type="text/css" href="../static/css/animations.css" />
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<script src="../javascript/modernizr.custom.js"></script>
 	</head>
-<body id="main" bgcolor="#aaa">
-	<div class="pt-perspective">
-		<div class="page1" background>
-			<img class="mySlides w3-animate-right" src="../static/img/1.jpg" style="width:70%; z-index: 1; ">
-			<img class="mySlides w3-animate-top" src="../static/img/2.jpg" style="width:70%; z-index: 1; ">
-			<img class="mySlides w3-animate-bottom" src="../static/img/3.jpg" style="width:70%; z-index: 1; ">
-			<div class = "Title" style = "z-index: 2;" ><h1>UP CEBU</h1></div>
+	<body>	
+
+		<div id="pt-main" class="pt-perspective">
+			<div class="pt-page pt-page-2">
+				<div class="w3-content w3-section" style="max-width:100%">
+					<img src="../static/img/1.jpg" style="width:100%; margin-top: -5%; z-index: 0; position: absolute;">
+				</div><h1><span>Home</span><strong>UP</strong> CEBU</h1>
+				<div class = "checkLeft">
+					<img src="../static/img/HomeLeft.png" style="width:100%; margin-top: -15%;  z-index: 2; position: absolute;">
+					<div class="pt-triggers" style = "top: 50%; left: 20%;">
+						<button id="iterateEffects" class="pt-touch-button" value = "three">Courses</button>
+					</div><!-- /dl-menu-wrapper-->
+				</div>
+				<div class = "checkRight">
+					<img src="../static/img/HomeRight.png" style="width:100%; margin-top: -5%; z-index: 1; position: absolute;">
+					<div class="pt-triggers" style = "top: 50%; left: 80%;">
+						<button id="iterateEffects" class="pt-touch-button" value = "four">Teachers</button>
+					</div><!-- /dl-menu-wrapper-->
+				</div>
+			</div>
+			<div class="pt-page pt-page-1">
+			<div class="courseName" style = " position: absolute; top: 82%; left: 1%; z-index: 0;">
+				<h1><strong>COURSE</strong>DETAILS</h1>
+			</div>
+			<div class="w3-content w3-display-container">
+				<img class="mySlides" src="../static/img/ARTS.png" style="width:100%; height: 500px">
+				<img class="mySlides" src="../static/img/BIO.png" style="width:100%; height: 500px">
+				<img class="mySlides" src="../static/img/CMSC.png" style="width:100%; height: 500px">
+				<img class="mySlides" src="../static/img/MGNT.png" style="width:100%; height: 500px">
+				<img class="mySlides" src="../static/img/PLSC.png" style="width:100%; height: 500px">
+
+				<button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+				<button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+			</div>
+				<div class="pt-triggers" style = "top: 62%; left: 80%;">
+					<button id="iterateEffects" class="pt-touch-button" value = "one">Home</button>
+				</div><!-- /dl-menu-wrapper-->
+			</div>
+			<div class="pt-page pt-page-3"><h1><span>Faculty</span><strong>FACULTY</strong> & STAFF</h1>
+				<div class="pt-triggers" style = "top: 50%; left: 20%;">
+					<button id="iterateEffects" class="pt-touch-button" value = "five">Home</button>
+				</div><!-- /dl-menu-wrapper-->
+			</div>
 		</div>
-		<div class="page2">
-			<h1><span>A collection of</span><strong>Page</strong> Transitions</h1>
+
+		<div class="pt-message">
+			<p>Your browser does not support CSS animations.</p>
 		</div>
-		<div class="page3">
-			<h1><span>A collection of</span><strong>Page</strong> Transitions</h1>
-		</div>
-	</div>
-</body>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="../javascript/jquery.dlmenu.js"></script>
+		<script src="../javascript/pagetransitions.js"></script>
+	</body>
 </html>
-<script src="../javascript/index.js"></script>
-<script src="../javascript/Objects.js"></script>
+
+<script src="../javascript/home.js"></script>

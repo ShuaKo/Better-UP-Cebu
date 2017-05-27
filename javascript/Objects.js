@@ -1,5 +1,6 @@
-function Image(Name, description){
-	this.Photo = Name;
+function Images(Name, description){
+	this.Photo = new Image();
+	this.Photo.src = Name;
 	this.Description = description;
 	this.changePhoto = function(link){
 		this.Photo = link;
@@ -12,7 +13,7 @@ function Gallery(){
 	this.gallery = [];
 	this.size = 0;
 	this.addPhoto = function(value, description){
-		this.gallery.push(new Image(value, description));
+		this.gallery.push(new Images(value, description));
 		this.size++;
 	}
 	this.editPhoto = function(position, value){
@@ -35,23 +36,4 @@ function Gallery(){
 		this.gallery.unshift(main);
 		this.size++;
 	}
-}
-var x = new Gallery();
-x.addPhoto(1, "hello");
-x.addPhoto(2, "hi");
-x.addPhoto(3, "yo");
-for(var i = 0; i < x.size; i++){
-	console.log(x.gallery[i].Photo + ", " + x.gallery[i].Description);
-}
-x.editDescription(2, "bad");
-for(var i = 0; i < x.size; i++){
-	console.log(x.gallery[i].Photo + ", " + x.gallery[i].Description);
-}
-x.editPhoto(2, 5);
-for(var i = 0; i < x.size; i++){
-	console.log(x.gallery[i].Photo + ", " + x.gallery[i].Description);
-}
-x.setMain(2);
-for(var i = 0; i < x.size; i++){
-	console.log(x.gallery[i].Photo + ", " + x.gallery[i].Description);
 }
