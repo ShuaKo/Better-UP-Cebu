@@ -10,7 +10,8 @@ const Teacher = database.define('teacher', {
 	},
 	name: {
 		type: Sequelize.STRING,
-		allowNull: false,
+		unique: true,
+		allowNull: false
 	},
 	course_graduated: {
 		type: Sequelize.STRING,
@@ -23,6 +24,12 @@ const Teacher = database.define('teacher', {
 	consultation: {
 		type: Sequelize.STRING,
 		allowNull: true
+	},
+
+
+
+	avatar {
+		type: Sequelize.STRING,
 	}
 });
 

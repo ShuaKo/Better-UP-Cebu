@@ -15,6 +15,10 @@ app.get('/', function(req, res) {
 	res.render('index.html');
 });
 
+app.get('/add_teacher', function(req, res) {
+	res.render('addteacher.html');
+});
+
 app.post('/add_teacher', function(req, res){
 	const name = req.body.name;
 	const course_graduated = req.body.course_graduated;
