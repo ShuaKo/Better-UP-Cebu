@@ -12,7 +12,7 @@ app.use(bodyparser.urlencoded({ extended: true}));
 app.use('/static', express.static('./static'));
 
 app.get('/', function(req, res) {
-	res.render('index.html');
+	res.render('home.html');
 });
 
 app.get('/add_teacher', function(req, res) {
