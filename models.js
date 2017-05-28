@@ -29,6 +29,7 @@ const Teacher = database.define('teacher', {
 	
 });
 
+
 database.sync();
 
 module.exports.Teacher = Teacher;
