@@ -67,7 +67,6 @@ app.get('/teacher_list', function(req, res) {
 		//console.log(teachers.name);
 		teachers = JSON.stringify(teachers);
 		if(teachers !== null) {
-
 			console.log('json' + teachers);
 		}
 		res.render('adminhome.html', {
