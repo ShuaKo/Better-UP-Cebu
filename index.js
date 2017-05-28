@@ -19,6 +19,14 @@ app.get('/add_teacher', function(req, res) {
 	res.render('addteacher.html');
 });
 
+app.get('/update_teacher', function(req, res) {
+	res.render('updateTeacher.html');
+});
+
+app.get('/update_avatar', function(req, res) {
+	res.render('updateAvatar.html');
+});
+
 app.post('/add_teacher', function(req, res){
 	const name = req.body.name;
 	const course_graduated = req.body.course_graduated;
@@ -37,7 +45,7 @@ app.post('/update_teacher', function(req, res){
 	const consultation = req.body.consultation;
 	// const id = req.body.id;
 	Teacher.update({name: name, course_graduated: course_graduated, description: description, consultation: consultation}, {where:{ name: name}}).then(function() {
-		res.render('index.html');
+		res.render('updateAvatar.html');
 	});
 });
 
