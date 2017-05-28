@@ -34,7 +34,7 @@ app.post('/add_teacher', function(req, res){
 	const consultation = req.body.consultation;
 
 	Teacher.create({name: name, course_graduated: course_graduated, description: description, consultation: consultation}).then(function() {
-		res.redirect('/');
+		res.redirect('/update_avatar');
 	});
 });
 
