@@ -10,8 +10,7 @@ const Teacher = database.define('teacher', {
 	},
 	name: {
 		type: Sequelize.STRING,
-		unique: true,
-		allowNull: false
+		allowNull: false,
 	},
 	course_graduated: {
 		type: Sequelize.STRING,
@@ -24,13 +23,8 @@ const Teacher = database.define('teacher', {
 	consultation: {
 		type: Sequelize.STRING,
 		allowNull: true
-	},
-
-
-
-	avatar {
-		type: Sequelize.STRING,
 	}
+	
 });
 
 database.sync();
